@@ -1,6 +1,8 @@
 # Continous Deployment
 
-A poc of app built on __continuous deployment__ process. 
+![Travis-CI badge](https://travis-ci.org/mikamboo/continuous-deployment.svg?branch=master)
+
+A poc of app built on __continuous deployment__ process. It demonstrate how we can integrate [Taiga](https://tree.taiga.io), [Travis-CI](https://travis-ci.org), [Github](https://github.com) around an [angularjs](https:://angular.io) project.
 
 
 ## Development server
@@ -11,6 +13,7 @@ This app is an [angular 2](https:://angular.io) + [firebase](https://firebase.go
 ### Prerequistes
 
 * node  v4.x.x & npm 3.x.x
+* firebase-tool
 * [angular-cli](https://github.com/angular/angular-cli) 
 
 
@@ -35,9 +38,9 @@ The [angular-cli](https://github.com/angular/angular-cli) tool provides some use
 
 ## Project links 
 
-* Source code : [Github](https://github.com/mikamboo/continuous-deployment)
-* CI server : [Travis-CI](https://travis-ci.org/mikamboo/continuous-deployment)
-* Project mangement : [Taiga](https://tree.taiga.io/project/mikamboo-continuous-deployment)
+* Source code : [Github sources](https://github.com/mikamboo/continuous-deployment)
+* CI server : [Travis-CI builds](https://travis-ci.org/mikamboo/continuous-deployment)
+* Project mangement : [Taiga project](https://tree.taiga.io/project/mikamboo-continuous-deployment)
 
 
 
