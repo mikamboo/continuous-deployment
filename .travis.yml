@@ -20,7 +20,7 @@ before_install:
 before_script:
   - npm install -g npm@4.0
   - npm install -g angular-cli
-  - npm install @angular/tsc-wrapped autoprefixer
+  - npm install @angular/tsc-wrapped autoprefixer loader-utils #fix travis-ci missing package 
   - npm install
 
 script: 
