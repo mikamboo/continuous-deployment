@@ -19,6 +19,7 @@ before_install:
 
 before_script:
   - npm install -g npm@4.0
+  - npm --version
   - npm install -g angular-cli
   - npm install
 
