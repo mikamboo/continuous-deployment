@@ -1,4 +1,4 @@
-# Continous Deployment
+# Continuous Deployment
 
 ![Travis-CI badge](https://travis-ci.org/mikamboo/continuous-deployment.svg?branch=master)
 
