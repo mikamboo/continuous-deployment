@@ -4,13 +4,6 @@ set -e # Exit with nonzero exit code if anything fails
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
-function cleanOutDir {
- rm -rf out/*
- rm out/.editorconfig
- rm out/.gitignore
- rm out/.travis.yml
-}
-
 function doCompile {
   if [ ! -d ./dist ]; then
     echo "Build files not found; exiting"
@@ -44,7 +37,10 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Clean out existing contents
-cleanOutDir
+mkdir _tmp_out
+mv out/.git _tmp_out
+rm -rf out
+mv _tmp_out out
 
 # Create proction package
 doCompile
