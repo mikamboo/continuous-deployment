@@ -4,6 +4,9 @@
 var isTravis = process.env.TRAVIS || false;
 var browsers = (isTravis) ? 'Chrome_travis_ci' : 'Chrome';
 
+console.log(browsers);
+
+
 module.exports = function (config) {
   config.set({
     basePath: '',
