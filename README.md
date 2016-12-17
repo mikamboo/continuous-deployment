@@ -1,6 +1,6 @@
 # Continuous Deployment
 
-![Travis-CI badge](https://travis-ci.org/mikamboo/continuous-deployment.svg?branch=master)
+[![Travis-CI badge](https://travis-ci.org/mikamboo/continuous-deployment.svg?branch=master)](https://travis-ci.org/mikamboo/continuous-deployment)
 
 A poc of app built on __continuous deployment__ process. It demonstrate how we can integrate [Taiga](https://tree.taiga.io), [Travis-CI](https://travis-ci.org), [Github](https://github.com) around an [angularjs](https:://angular.io) project.
 
