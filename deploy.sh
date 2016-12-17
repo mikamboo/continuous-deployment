@@ -22,11 +22,11 @@ function doCompile {
 
 TRAVIS_PULL_REQUEST="false"
 TRAVIS_BRANCH=$SOURCE_BRANCH
-COMMIT_AUTHOR_EMAIL="mike@mikangali.com"
+GIT_AUTHOR_EMAIL=$COMMIT_AUTHOR_EMAIL
 
-# Pull requests and commits to other branches shouldn't try to deploy, just build to verify
+# Pull requests and commits to other branches shouldn't try to deploy.
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    echo "Skipping deploy; just doing a build."
+    echo "Pull requests and commits to other branches shouldn't try to deploy; skipping deploy."
     #doCompile
     exit 0
 fi
@@ -52,7 +52,7 @@ doCompile
 # Now let's go have some fun with the cloned repo
 cd out
 git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
+git config user.email "$GIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
@@ -77,3 +77,4 @@ ssh-add deploy_key
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
+
