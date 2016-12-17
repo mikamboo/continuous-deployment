@@ -4,14 +4,30 @@ set -e # Exit with nonzero exit code if anything fails
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
-function doCompile {
-  ./compile.sh
+function cleanOutDir {
+ rm -rf out/*
+ rm out/.editorconfig
+ rm out/.gitignore
+ rm out/.travis.yml
 }
+
+function doCompile {
+  if [ ! -d ./dist ]; then
+    echo "Build files not found; exiting"
+    exit 0
+  fi
+  echo "copy app bundle files ..."
+  cp dist/* out/
+}
+
+TRAVIS_PULL_REQUEST="false"
+TRAVIS_BRANCH=$SOURCE_BRANCH
+COMMIT_AUTHOR_EMAIL="mike@mikangali.com"
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
 if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
-    doCompile
+    #doCompile
     exit 0
 fi
 
@@ -28,9 +44,9 @@ git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 cd ..
 
 # Clean out existing contents
-rm -rf out/**/* || exit 0
+cleanOutDir
 
-# Run our compile script
+# Create proction package
 doCompile
 
 # Now let's go have some fun with the cloned repo

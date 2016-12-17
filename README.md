@@ -15,6 +15,7 @@ This app is an [angular 2](https:://angular.io) + [firebase](https://firebase.go
 * node  v4.x.x & npm 3.x.x
 * firebase-tool
 * [angular-cli](https://github.com/angular/angular-cli) 
+* [travis-ci cli](https://github.com/travis-ci/travis.rb)
 
 
 ### Start 
@@ -41,6 +42,10 @@ The [angular-cli](https://github.com/angular/angular-cli) tool provides some use
 * Source code : [Github sources](https://github.com/mikamboo/continuous-deployment)
 * CI server : [Travis-CI builds](https://travis-ci.org/mikamboo/continuous-deployment)
 * Project mangement : [Taiga project](https://tree.taiga.io/project/mikamboo-continuous-deployment)
+
+## Resources
+
+* [Tuto : travis-ci deploy on gh-pages](https://gist.github.com/mikamboo/5b9081eda37b1b3f635d3b6dd50c4705)
 
 
 
