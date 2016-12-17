@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "",
+    "baseUrl": "continuous-deployment",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
