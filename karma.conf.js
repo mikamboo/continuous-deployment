@@ -50,6 +50,6 @@ module.exports = function (config) {
     },
 
     // CI mode : capture browsers, run tests and exit
-    singleRun: true 
+    singleRun: isTravis 
   });
 };
