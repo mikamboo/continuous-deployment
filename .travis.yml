@@ -27,6 +27,6 @@ script:
   - npm run test
 
 after_success:
-  - npm build
+  - npm run build
   - bash ./deploy.sh
 
