@@ -26,8 +26,9 @@ before_script:
 script: 
   - npm run lint
   - npm run test
-  #- npm run build
 
 deploy:
-  #- ng github-pages:deploy --message "Optional commit message"
+  skip_cleanup: true
+  provider: script
+  script: ng github-pages:deploy --message "Deploy to GitHub Pages"
   
