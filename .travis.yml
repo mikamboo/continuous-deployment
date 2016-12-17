@@ -25,6 +25,9 @@ before_script:
 
 script: 
   - npm run lint
-  #- npm run test
-  - ./node_modules/.bin/karma start --browsers Chrome --single-run
-  - npm run build
+  - npm run test
+  #- npm run build
+
+deploy:
+  #- ng github-pages:deploy --message "Optional commit message"
+  
