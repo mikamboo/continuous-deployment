@@ -47,5 +47,9 @@ The [angular-cli](https://github.com/angular/angular-cli) tool provides some use
 
 * [Tuto : travis-ci deploy on gh-pages](https://gist.github.com/mikamboo/5b9081eda37b1b3f635d3b6dd50c4705)
 
+## LICENSE : MIT
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 
